@@ -10,12 +10,14 @@
         document.getElementById("Inbox").style.display="none";
         document.getElementById("SentMail").style.display="none";
         }
-        function inbox(){
-        
+        function inbox(){        
         document.getElementById("SendEmail").style.display="none";
         document.getElementById("Inbox").style.display="block";
         document.getElementById("SentMail").style.display="none";
-
+        var span=document.getElementById("InboxMenu");
+            span.setAttribute("class","menueItem active")
+            var o=document.getElementById("SentMenu");
+            o.setAttribute("class","menueItem");
 
         
         }
@@ -23,10 +25,12 @@
         document.getElementById("SendEmail").style.display="none";
         document.getElementById("Inbox").style.display="none";
         document.getElementById("SentMail").style.display="block";
-
-
-
+        var span=document.getElementById("SentMenu");
+            span.setAttribute("class","menueItem active");
+            var o=document.getElementById("InboxMenu");
+            o.setAttribute("class","menueItem");
         }
+
         function cheakall(ck1){
             var div=document.getElementById("Inbox");
             var tab=div.getElementsByTagName("table")[0];
@@ -147,8 +151,7 @@
         tr1.appendChild(td4);
         tab.appendChild(tr1)
            
-    }
-    
+    }    
         </script>
 
 
@@ -172,7 +175,7 @@
                 <button class="btn ComposeButton"onclick="compose()">compose</button>
             </div>
             <div class="MenuItemBox">
-                <div class="menueItem active" id="InboxMenu" onclick="inbox()">
+                <div class="menueItem" id="InboxMenu" onclick="inbox()">
                 <span>
                     Inbox
                 </span>
@@ -270,7 +273,7 @@
                     <button class="btn ButtonSubmit"  onclick="send1()">Send</button>
                 </div>
                 <div class="CancelBox">
-                    <button class="btn btn-default" onclick="inbox()">Cancel</button>
+                    <button class="btn btn-default" onclick="inbox()()">Cancel</button>
                 </div>
             </div>
         </div>

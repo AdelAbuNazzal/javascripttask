@@ -83,6 +83,7 @@
             x.getElementsByClassName("emailAction")[0].style.display="none";
         }
         function fun3(x){
+            debugger;
             var r=x.parentNode.parentNode.parentNode;
             var h=x.parentNode.parentNode.parentNode.parentNode;
             h.removeChild(r);
@@ -113,7 +114,8 @@
         }
     }}
     function cheasub1(){
-            var div=document.getElementById("SentMail");
+        debugger;
+            var div=document.getElementById("tblSent");
             var tab=div.getElementsByTagName("table")[0];
             var x=tab.getElementsByTagName("input");
             for(var i=0;i<x.length;i++){
@@ -138,8 +140,8 @@
         var to=document.getElementById("txtTo").value;
         var to_value=document.createTextNode(to);
         td2.appendChild(to_value);
-        var subject1=document.getElementById("txtTo").value;
-        var subject1_value=document.createTextNode(to);
+        var subject1=document.getElementById("txtSubject").value;
+        var subject1_value=document.createTextNode(subject1);
         td3.appendChild(subject1_value);
         var today=new Date();
         var date=today.toDateString();
